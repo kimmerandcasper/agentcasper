@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentCasper.com</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .agents {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .agents a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+        .agents a:hover {
+            text-decoration: underline;
+        }
+        .blurb {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Welcome to AgentCasper.com</h1>
+    </div>
+
+    <div class="agents">
+        <a href="#" id="agent1">Kimmer O'Reilly</a>
+        <a href="#" id="agent2">Evan DeTienne</a>
+    </div>
+
+    <div class="blurb">
+        <p>
+            At AgentCasper.com, we are committed to providing the best real estate services in the industry. Our experienced agents, Kimmer O'Reilly and Evan DeTienne, are dedicated to helping you find your dream home or sell your property with ease. We pride ourselves on our personalized approach and deep knowledge of the local market. Contact us today to start your real estate journey with professionals you can trust.
+        </p>
+    </div>
+
+    <script>
+        document.getElementById('agent1').onclick = function() {
+            window.location.href = 'mailto:kimmer@agentcasper.com';
+        };
+        document.getElementById('agent2').onclick = function() {
+            window.location.href = 'mailto:evan@agentcasper.com';
+        };
+    </script>
+
+</body>
+</html>
