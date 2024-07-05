@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgentCasper1</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -31,13 +33,16 @@
             width: 133px; /* Increase the headshot images by 33% */
             height: auto;
         }
-        .agents a {
-            text-decoration: none;
-            color: #3498db;
-            font-weight: bold;
+        .agent button {
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+            border: 1px solid black;
+            color: black;
+            padding: 5px 10px;
+            cursor: pointer;
         }
-        .agents a:hover {
-            text-decoration: underline;
+        .agent button:hover {
+            background-color: #f0f0f0;
         }
         .blurb {
             text-align: center;
@@ -56,12 +61,12 @@
         <div class="agent">
             <img src="KimmerHeadShot.png" alt="Kimmer O'Reilly">
             <br>
-            <a href="#" id="agent1">Kimmer O'Reilly</a>
+            <button id="agent1">Kimmer O'Reilly</button>
         </div>
         <div class="agent">
             <img src="KimmerHeadShot.png" alt="Evan DeTienne">
             <br>
-            <a href="#" id="agent2">Evan DeTienne</a>
+            <button id="agent2">Evan DeTienne</button>
         </div>
     </div>
 
