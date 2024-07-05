@@ -84,6 +84,22 @@
             height: auto;
             margin: 0 10px;
         }
+
+        /* Media queries for mobile devices */
+        @media (max-width: 768px) {
+            .header img {
+                width: 42.5%; /* Title logo 2x as big */
+            }
+            .navigation button {
+                width: 18%; /* Make navigation buttons smaller */
+                padding: 5px 0; /* Adjust padding */
+                margin: 2px; /* Adjust margin */
+            }
+            .blurb {
+                max-width: 100%; /* Text box as wide as phone allows */
+                padding: 2px; /* Minimal padding */
+            }
+        }
     </style>
 </head>
 <body>
@@ -102,7 +118,7 @@
 
     <div class="agents">
         <div class="agent">
-            <img src="KimmerHeadShot2.png" alt="Kimmer O'Reilly">
+            <img src="KimmerHeadShot.png" alt="Kimmer O'Reilly">
             <br>
             <button id="agent1">Kimmer O'Reilly</button>
         </div>
