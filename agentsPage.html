@@ -9,107 +9,6 @@
     <meta name="author" content="Agent Casper">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
-    <meta property="og:title" content="Agent Casper - Exceptional Real Estate Services">
-    <meta property="og:description" content="At AgentCasper.com, we offer exceptional real estate services with personalized expertise from Kimmer O'Reilly and Evan DeTienne.">
-    <meta property="og:image" content="path/to/your/image.jpg">
-    <meta property="og:url" content="https://www.agentcasper.com">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Agent Casper - Exceptional Real Estate Services">
-    <meta name="twitter:description" content="At AgentCasper.com, we offer exceptional real estate services with personalized expertise from Kimmer O'Reilly and Evan DeTienne.">
-    <meta name="twitter:image" content="path/to/your/image.jpg">
-    <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "RealEstateAgent",
-      "name": "Agent Casper",
-      "url": "https://www.agentcasper.com",
-      "logo": "https://www.agentcasper.com/favicon.png",
-      "image": "https://www.agentcasper.com/path/to/your/image.jpg",
-      "description": "At AgentCasper.com, we offer exceptional real estate services with personalized expertise from Kimmer O'Reilly and Evan DeTienne.",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-800-555-5555",
-        "contactType": "Customer Service"
-      }
-    }
-    </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background: url('RealEstateBackground.JPG') repeat;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 10px; /* Reduced margin-bottom to bring buttons closer */
-        }
-        .header img {
-            width: 21.25%; /* Scale the logo to 15% smaller */
-        }
-        .navigation {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .navigation button {
-            font-family: 'Roboto', sans-serif;
-            background-color: white;
-            border: 1px solid black;
-            color: black;
-            padding: 5px 20px; /* Reduced padding to decrease height */
-            margin: 5px;
-            cursor: pointer;
-        }
-        .navigation button:hover {
-            background-color: #f0f0f0;
-        }
-        .agents {
-            display: flex;
-            justify-content: center;
-            gap: 40px; /* Increased gap between agents */
-            margin-bottom: 20px;
-        }
-        .agent {
-            text-align: center;
-        }
-        .agent img {
-            width: 133px; /* Increase the headshot images by 33% */
-            height: auto;
-        }
-        .agent button {
-            font-family: 'Roboto', sans-serif;
-            background-color: white;
-            border: 1px solid black;
-            color: black;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-        .agent button:hover {
-            background-color: #f0f0f0;
-        }
-        .blurb {
-            text-align: left; /* Left justify the text */
-            max-width: calc(25% * 1.1 * 1.1); /* Width 10% wider */
-            margin: 0 auto;
-            border: 1px solid black; /* Thin black border */
-            background-color: rgba(255, 255, 255, 0.8); /* Very opaque white background */
-            padding: 2px; /* Minimal padding */
-            margin-bottom: 40px; /* Added buffer```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agent Casper</title>
-    <meta name="description" content="At AgentCasper.com, we offer exceptional real estate services with personalized expertise from Kimmer O'Reilly and Evan DeTienne.">
-    <meta name="keywords" content="real estate, houses, homes, agents, Agent Casper, Kimmer O'Reilly, Evan DeTienne">
-    <meta name="author" content="Agent Casper">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png"> <!-- For Apple devices -->
     <meta property="og:title" content="Agent Casper - Exceptional Real Estate Services">
     <meta property="og:description" content="At AgentCasper.com, we offer exceptional real estate services with personalized expertise from Kimmer O'Reilly and Evan DeTienne.">
@@ -180,6 +79,7 @@
         .agent img {
             width: 133px; /* Increase the headshot images by 33% */
             height: auto;
+            cursor: pointer; /* Add cursor pointer to indicate clickability */
         }
         .agent button {
             font-family: 'Roboto', sans-serif;
@@ -227,6 +127,10 @@
                 padding: 5px 0; /* Adjust padding */
                 margin: 2px; /* Adjust margin */
             }
+            .agents img {
+                width: 100%; /* Make the business card image as wide as the screen allows */
+                height: auto;
+            }
             .blurb {
                 max-width: 100%; /* Text box as wide as phone allows */
                 padding: 2px; /* Minimal padding */
@@ -250,12 +154,12 @@
 
     <div class="agents">
         <div class="agent">
-            <img src="KimmerHeadShot2.png" alt="Kimmer O'Reilly">
+            <img src="KimmerHeadShot2.png" alt="Kimmer O'Reilly" onclick="location.href='kimmer.html'">
             <br>
             <button id="agent1" onclick="location.href='kimmer.html'">Kimmer O'Reilly</button>
         </div>
         <div class="agent">
-            <img src="EvanHeadShot.png" alt="Evan DeTienne">
+            <img src="EvanHeadShot.png" alt="Evan DeTienne" onclick="location.href='evan.html'">
             <br>
             <button id="agent2" onclick="location.href='evan.html'">Evan DeTienne</button>
         </div>
@@ -263,7 +167,7 @@
 
     <div class="blurb">
         <p>
-            At AgentCasper.com, we are dedicated to providing exceptional real estate services. Our experienced agents, Kimmer O'Reilly and Evan DeTienne, possess extensive knowledge of the local market and are committed to helping you find your ideal home or successfully sell your property. We pride ourselves on our personalized approach, ensuring each client receives tailored service and professional expertise. Contact us today to begin your real estate journey with trusted professionals.
+            Kimmer O'Reilly is an awesome and effective real estate agent, committed to providing top-notch services and personalized expertise to help you find your ideal home or sell your property quickly and efficiently. With extensive knowledge of the local market and a dedication to client satisfaction, Kimmer ensures a smooth and successful real estate experience. Contact Kimmer O'Reilly today and take the first step towards achieving your real estate goals. See Deals for deal terms and limitations.
         </p>
     </div>
 
@@ -275,15 +179,6 @@
         </div>
         <img src="Remaxlogo.png" alt="Remax Logo">
     </div>
-
-    <script>
-        document.getElementById('agent1').onclick = function() {
-            window.location.href = 'kimmer.html';
-        };
-        document.getElementById('agent2').onclick = function() {
-            window.location.href = 'evan.html';
-        };
-    </script>
 
 </body>
 </html>
