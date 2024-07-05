@@ -68,28 +68,12 @@
             background-color: #f0f0f0;
         }
         .agents {
-            display: flex;
-            justify-content: center;
-            gap: 40px; /* Increased gap between agents */
+            text-align: center;
             margin-bottom: 20px;
         }
-        .agent {
-            text-align: center;
-        }
-        .agent img {
-            width: 133px; /* Increase the headshot images by 33% */
+        .agents img {
+            width: 100%; /* Make the business card image as wide as the navigation sequence */
             height: auto;
-        }
-        .agent button {
-            font-family: 'Roboto', sans-serif;
-            background-color: white;
-            border: 1px solid black;
-            color: black;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-        .agent button:hover {
-            background-color: #f0f0f0;
         }
         .blurb {
             text-align: left; /* Left justify the text */
@@ -125,6 +109,10 @@
                 width: 18%; /* Make navigation buttons smaller */
                 padding: 5px 0; /* Adjust padding */
                 margin: 2px; /* Adjust margin */
+            }
+            .agents img {
+                width: 100%; /* Make the business card image as wide as the screen allows */
+                height: auto;
             }
             .blurb {
                 max-width: 100%; /* Text box as wide as phone allows */
