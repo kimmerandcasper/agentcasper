@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentCasper1</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: url('RealEstateBackground.JPG') repeat;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 10px; /* Reduced margin-bottom to bring buttons closer */
+        }
+        .header img {
+            width: 21.25%; /* Scale the logo to 15% smaller */
+        }
+        .navigation {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .navigation button {
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+            border: 1px solid black;
+            color: black;
+            padding: 5px 20px; /* Reduced padding to decrease height */
+            margin: 5px;
+            cursor: pointer;
+        }
+        .navigation button:hover {
+            background-color: #f0f0f0;
+        }
+        .agents {
+            display: flex;
+            justify-content: center;
+            gap: 40px; /* Increased gap between agents */
+            margin-bottom: 20px;
+        }
+        .agent {
+            text-align: center;
+        }
+        .agent img {
+            width: 133px; /* Increase the headshot images by 33% */
+            height: auto;
+        }
+        .agent button {
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+            border: 1px solid black;
+            color: black;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .agent button:hover {
+            background-color: #f0f0f0;
+        }
+        .blurb {
+            text-align: left; /* Left justify the text */
+            max-width: calc(25% * 1.1 * 1.1); /* Width 10% wider */
+            margin: 0 auto;
+            border: 1px solid black; /* Thin black border */
+            background-color: rgba(255, 255, 255, 0.8); /* Very opaque white background */
+            padding: 2px; /* Minimal padding */
+            margin-bottom: 40px; /* Added buffer zone between blurb and footer */
+        }
+        .footer {
+            border-top: 1px solid black; /* Thin black bar separating footer */
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .footer img {
+            width: 21.25%; /* Same size as title logo */
+            height: auto;
+        }
+        .footer .icons img {
+            width: 10%; /* Smaller icons */
+            height: auto;
+            margin: 0 10px;
+        }
+
+        /* Media queries for mobile devices */
+        @media (max-width: 768px) {
+            .header img {
+                width: 42.5%; /* Title logo 2x as big */
+            }
+            .navigation button {
+                width: 18%; /* Make navigation buttons smaller */
+                padding: 5px 0; /* Adjust padding */
+                margin: 2px; /* Adjust margin */
+            }
+            .blurb {
+                max-width: 100%; /* Text box as wide as phone allows */
+                padding: 2px; /* Minimal padding */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="AgentCasperLogo.png" alt="Agent Casper Logo">
+    </div>
+
+    <div class="navigation">
+        <button id="navHome" onclick="location.href='index.html'">Home</button>
+        <button id="navCasper" onclick="location.href='casper.html'">Casper</button>
+        <button id="navAgents" onclick="location.href='agentsPage.html'">Agents</button>
+        <button id="navHouses" onclick="location.href='houses.html'">Houses</button>
+        <button id="navDeals" onclick="location.href='deals.html'">Deals</button>
+    </div>
+
+    <div class="agents">
+        <div class="agent">
+            <img src="KimmerHeadShot2.png" alt="Kimmer O'Reilly">
+            <br>
+            <button id="agent1" onclick="location.href='kimmer.html'">Kimmer O'Reilly</button>
+        </div>
+        <div class="agent">
+            <img src="EvanHeadShot.png" alt="Evan DeTienne">
+            <br>
+            <button id="agent2" onclick="location.href='evan.html'">Evan DeTienne</button>
+        </div>
+    </div>
+
+    <div class="blurb">
+        <p>
+            At AgentCasper.com, we are dedicated to providing exceptional real estate services. Our experienced agents, Kimmer O'Reilly and Evan DeTienne, possess extensive knowledge of the local market and are committed to helping you find your ideal home or successfully sell your property. We pride ourselves on our personalized approach, ensuring each client receives tailored service and professional expertise. Contact us today to begin your real estate journey with trusted professionals.
+        </p>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 AgentCasper.com. All rights reserved.</p>
+        <div class="icons">
+            <img src="NARicon.png" alt="NAR Icon">
+            <img src="EQicon.png" alt="EQ Icon">
+        </div>
+        <img src="Remaxlogo.png" alt="Remax Logo">
+    </div>
+
+    <script>
+        document.getElementById('agent1').onclick = function() {
+            window.location.href = 'kimmer.html';
+        };
+        document.getElementById('agent2').onclick = function() {
+            window.location.href = 'evan.html';
+        };
+    </script>
+
+</body>
+</html>
