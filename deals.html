@@ -67,18 +67,6 @@
         .navigation button:hover {
             background-color: #f0f0f0;
         }
-        .title {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 2em;
-            font-weight: bold;
-        }
-        .subtitle {
-            text-align: center;
-            margin-top: 10px;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
         .terms {
             text-align: left; /* Left justify the text */
             max-width: calc(25% * 1.1 * 1.1); /* Width 10% wider */
@@ -87,6 +75,18 @@
             background-color: rgba(255, 255, 255, 0.8); /* Very opaque white background */
             padding: 10px; /* Increased padding for readability */
             margin-bottom: 40px; /* Added buffer zone between terms and footer */
+        }
+        .title {
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            margin-top: 0; /* Removed top margin */
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 10px; /* Adjusted margin-top */
         }
         .footer {
             border-top: 1px solid black; /* Thin black bar separating footer */
@@ -135,10 +135,9 @@
         <button id="navDeals" onclick="location.href='deals.html'">Deals</button>
     </div>
 
-    <div class="title">Deals</div>
-    <div class="subtitle">Terms and Limitations</div>
-
     <div class="terms">
+        <div class="title">Deals</div>
+        <div class="subtitle">Terms and Limitations</div>
         <p>
             All deals are subject to withdrawal at any time unless contractually obligated to perform under a buy/sell listing agreement with the broker. Deals are meant to have specific purposes for marketing and are not unlimited or immortal. The deals expire and are only ever valid under a listing agreement with the broker.
         </p>
