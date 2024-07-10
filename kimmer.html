@@ -71,10 +71,21 @@
             text-align: center;
             margin-bottom: 20px;
         }
+        .agent {
+            position: relative; /* Ensure relative positioning for nested elements */
+        }
         .agents img {
-            width: 80%; /* Limit the width of the business card image */
+            width: 33%; /* Limit the width of the business card image */
             height: auto;
             border: 1px solid black; /* Add border to business card image */
+        }
+        .small-text {
+            text-align: center;
+            margin-top: 5px;
+        }
+        .small-text p {
+            font-size: 0.8em;
+            margin: 0;
         }
         .contact-info {
             text-align: center;
@@ -157,6 +168,9 @@
     <div class="agents">
         <div class="agent">
             <img src="kimmersBussinessCard.png" alt="Kimmer O'Reilly Business Card">
+            <div class="small-text">
+                <p><a href="deals.html">1.5% Terms and Limitations</a></p>
+            </div>
         </div>
     </div>
 
