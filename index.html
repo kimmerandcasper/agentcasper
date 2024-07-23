@@ -184,6 +184,18 @@
             }
         }
     </style>
+    <script>
+        function scrollToContactInfo() {
+            const contactInfo = document.querySelector('.description');
+            contactInfo.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function playVideo() {
+            const video = document.querySelector('.video-container video');
+            video.play();
+            video.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </head>
 <body>
     <div class="header">
@@ -203,9 +215,9 @@
     </div>
 
     <div class="nav-buttons">
-        <button onclick="location.href='contact.html'">Contact Me</button>
-        <button onclick="location.href='casper.html'">Meet Casper</button>
-        <button onclick="location.href='disclaimer.html'">Disclaimer</button>
+        <button onclick="scrollToContactInfo()">Contact Me</button>
+        <button onclick="playVideo()">Meet Casper</button>
+        <button onclick="location.href='deals.html'">Disclaimer</button>
     </div>
 
     <div class="description">
@@ -227,17 +239,13 @@
 
     <div class="footer">
         <p>&copy; 2024 AgentCasper.com. All rights reserved.</p>
-        <div class="iconsHere is the updated HTML with the new buttons and the changes as requested:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agent Casper</title>
-    <meta name="description" content="At AgentCasper.com, we offer exceptional real estate services with personalized expertise from Kimmer O'Reilly and Evan DeTienne.">
-    <meta name="keywords" content="real estate, houses, homes, agents, Agent Casper, Kimmer O'Reilly, Evan DeTienne">
-    <meta name="author" content="Agent Casper">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CasperHeadshot1.jpg">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/C
+        <div class="icons">
+            <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/RElogos.png" alt="RE Logos">
+        </div>
+        <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/kwlogo.png" alt="KW Logo">
+        <div class="contact-info">
+            Real Estate Agent License: 24015725 | Each Keller Williams office is independently owned & operated.
+        </div>
+    </div>
+</body>
+</html>
