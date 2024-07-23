@@ -7,9 +7,9 @@
     <meta name="description" content="At AgentCasper.com, we offer exceptional real estate services with personalized expertise from Kimmer O'Reilly and Evan DeTienne.">
     <meta name="keywords" content="real estate, houses, homes, agents, Agent Casper, Kimmer O'Reilly, Evan DeTienne">
     <meta name="author" content="Agent Casper">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png"> <!-- For Apple devices -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CasperHeadshot1.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CasperHeadshot1.jpg">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CasperHeadshot1.jpg"> <!-- For Apple devices -->
     <meta property="og:title" content="Agent Casper - Exceptional Real Estate Services">
     <meta property="og:description" content="At AgentCasper.com, we offer exceptional real estate services with personalized expertise from Kimmer O'Reilly and Evan DeTienne.">
     <meta property="og:image" content="path/to/your/image.jpg">
@@ -25,7 +25,7 @@
       "@type": "RealEstateAgent",
       "name": "Agent Casper",
       "url": "https://www.agentcasper.com",
-      "logo": "https://www.agentcasper.com/favicon.png",
+      "logo": "https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CasperHeadshot1.jpg",
       "image": "https://www.agentcasper.com/path/to/your/image.jpg",
       "description": "At AgentCasper.com, we offer exceptional real estate services with personalized expertise from Kimmer O'Reilly and Evan DeTienne.",
       "contactPoint": {
@@ -38,43 +38,63 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: black; /* Changed background to black */
-            height: 100vh; /* Set body height to 100vh */
+            background-color: black;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start; /* Align items at the start of the column */
             align-items: center;
+            color: white; /* Changed text color to white for better contrast against black background */
+            padding-top: 20px; /* Add padding to top */
         }
+
         .header {
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
+
         .header img {
             width: 50%; /* Reduced logo size by 50% */
             height: auto;
         }
+
+        .description {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 0 20px; /* Add padding to the sides */
+            max-width: 800px; /* Limit the width of the description */
+        }
+
         .video-container {
             text-align: center;
             margin: 20px 0;
         }
-        .video-container iframe {
+
+        .video-container video {
             width: 315px; /* Reduced video width for vertical orientation */
             height: 560px; /* Adjusted height for vertical orientation */
         }
+
         .footer {
             border-top: 1px solid black; /* Thin black bar separating footer */
             text-align: center;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.8);
         }
+
         .footer img {
             width: 21.25%; /* Same size as title logo */
             height: auto;
         }
+
         .footer .icons img {
             width: 10%; /* Smaller icons */
             height: auto;
@@ -94,9 +114,15 @@
         <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/AgentCasperEmailHeader.png" alt="Agent Casper Logo">
     </div>
 
+    <div class="description">
+        <p>My name is Kimmer O'Reilly. I was once a Securities Professional running the Private Equity firm Comet Capital Investments, L.P., and a Banker for the Federal Savings Bank before falling ill with Acute B-Cell Lymphoblastic Leukemia at the age of 28. Moving back home to the TriCities to recover from a stem cell transplant, I took my Real Estate Licensing classes and spend my days riding around town on my Harley with Casper, my service dog. Together, for a limited time, we're offering a crazy 1.5% commission deal to sellers & buyers to supercharge my career, saving you money and helping me heal from the financial damage caused by cancer. That's a dog-gone good deal! Please reach out to us for professional Real Estate service at a</p>
+    </div>
+
     <div class="video-container">
-        <!-- Instagram video embed, using iframe for embedding. -->
-        <iframe src="https://www.instagram.com/reel/C9sau7QPJpI/embed" frameborder="0" allowfullscreen autoplay></iframe>
+        <video controls autoplay>
+            <source src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CasperCommercial.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 
     <div class="footer">
