@@ -7,9 +7,9 @@
     <meta name="description" content="At AgentCasper.com, we offer exceptional real estate services with personalized expertise from Kimmer O'Reilly and Evan DeTienne.">
     <meta name="keywords" content="real estate, houses, homes, agents, Agent Casper, Kimmer O'Reilly, Evan DeTienne">
     <meta name="author" content="Agent Casper">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CasperHeadshot1.jpg">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CasperHeadshot1.jpg">
-    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CasperHeadshot1.jpg"> <!-- For Apple devices -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://github.com/kimmerandcasper/agentcasper/blob/main/CasperHeadshot1.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://github.com/kimmerandcasper/agentcasper/blob/main/CasperHeadshot1.jpg">
+    <link rel="apple-touch-icon" href="https://github.com/kimmerandcasper/agentcasper/blob/main/CasperHeadshot1.jpg"> <!-- For Apple devices -->
     <meta property="og:title" content="Agent Casper - Exceptional Real Estate Services">
     <meta property="og:description" content="At AgentCasper.com, we offer exceptional real estate services with personalized expertise from Kimmer O'Reilly and Evan DeTienne.">
     <meta property="og:image" content="path/to/your/image.jpg">
@@ -25,7 +25,7 @@
       "@type": "RealEstateAgent",
       "name": "Agent Casper",
       "url": "https://www.agentcasper.com",
-      "logo": "https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CasperHeadshot1.jpg",
+      "logo": "https://github.com/kimmerandcasper/agentcasper/blob/main/CasperHeadshot1.jpg",
       "image": "https://www.agentcasper.com/path/to/your/image.jpg",
       "description": "At AgentCasper.com, we offer exceptional real estate services with personalized expertise from Kimmer O'Reilly and Evan DeTienne.",
       "contactPoint": {
@@ -36,17 +36,17 @@
     }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
         html, body {
             height: 100%;
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            overflow-x: hidden; /* Allow vertical scrolling but hide horizontal overflow */
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Open Sans', sans-serif;
             background-color: black;
             display: flex;
             flex-direction: column;
@@ -67,10 +67,15 @@
         }
 
         .description {
-            text-align: center;
+            text-align: left;
             margin-bottom: 20px;
             padding: 0 20px; /* Add padding to the sides */
             max-width: 800px; /* Limit the width of the description */
+        }
+
+        .highlight {
+            background-color: yellow;
+            color: black;
         }
 
         .video-container {
@@ -115,7 +120,7 @@
     </div>
 
     <div class="description">
-        <p>My name is Kimmer O'Reilly. I was once a Securities Professional running the Private Equity firm Comet Capital Investments, L.P., and a Banker for the Federal Savings Bank before falling ill with Acute B-Cell Lymphoblastic Leukemia at the age of 28. Moving back home to the TriCities to recover from a stem cell transplant, I took my Real Estate Licensing classes and spend my days riding around town on my Harley with Casper, my service dog. Together, for a limited time, we're offering a crazy 1.5% commission deal to sellers & buyers to supercharge my career, saving you money and helping me heal from the financial damage caused by cancer. That's a dog-gone good deal! Please reach out to us for professional Real Estate service at a</p>
+        <p>My name is Kimmer O'Reilly. I was once a Securities Professional running the Private Equity firm Comet Capital Investments, L.P., and a Banker for the Federal Savings Bank before falling ill with Acute B-Cell Lymphoblastic Leukemia at the age of 28. Moving back home to the TriCities to recover from a stem cell transplant, I took my Real Estate Licensing classes and spend my days riding around town on my Harley with Casper, my service dog. Together, for a limited time, we're offering a <span class="highlight">crazy 1.5% commission deal</span> to sellers & buyers to supercharge my career, saving you money and helping me heal from the financial damage caused by cancer. That's a dog-gone good deal! Please reach out to us for professional Real Estate service at a</p>
     </div>
 
     <div class="video-container">
