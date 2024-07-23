@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agent Casper - Deals</title>
+    <title>Agent Casper</title>
     <meta name="description" content="At AgentCasper.com, we offer exceptional real estate services with personalized expertise from Kimmer O'Reilly and Evan DeTienne.">
     <meta name="keywords" content="real estate, houses, homes, agents, Agent Casper, Kimmer O'Reilly, Evan DeTienne">
     <meta name="author" content="Agent Casper">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CasperHeadshot1.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CasperHeadshot1.jpg">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/agentcasper/main/CasperHeadshot1.jpg"> <!-- For Apple devices -->
     <meta property="og:title" content="Agent Casper - Exceptional Real Estate Services">
     <meta property="og:description" content="At AgentCasper.com, we offer exceptional real estate services with personalized expertise from Kimmer O'Reilly and Evan DeTienne.">
     <meta property="og:image" content="path/to/your/image.jpg">
@@ -25,7 +25,7 @@
       "@type": "RealEstateAgent",
       "name": "Agent Casper",
       "url": "https://www.agentcasper.com",
-      "logo": "https://www.agentcasper.com/favicon.png",
+      "logo": "https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CasperHeadshot1.jpg",
       "image": "https://www.agentcasper.com/path/to/your/image.jpg",
       "description": "At AgentCasper.com, we offer exceptional real estate services with personalized expertise from Kimmer O'Reilly and Evan DeTienne.",
       "contactPoint": {
@@ -36,121 +36,214 @@
     }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Allow vertical scrolling but hide horizontal overflow */
+        }
 
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background: url('RealEstateBackground.JPG') repeat;
+            font-family: 'Open Sans', sans-serif;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Align items at the start of the column */
+            align-items: center;
+            color: white; /* Changed text color to white for better contrast against black background */
+            padding-top: 20px; /* Add padding to top */
         }
+
         .header {
-            text-align: center;
-            margin-bottom: 10px; /* Reduced margin-bottom to bring buttons closer */
-        }
-        .header img {
-            width: 21.25%; /* Scale the logo to 15% smaller */
-        }
-        .navigation {
             text-align: center;
             margin-bottom: 20px;
         }
-        .navigation button {
-            font-family: 'Roboto', sans-serif;
-            background-color: white;
-            border: 1px solid black;
-            color: black;
-            padding: 5px 20px; /* Reduced padding to decrease height */
-            margin: 5px;
-            cursor: pointer;
+
+        .header img {
+            width: 50%; /* Reduced logo size by 50% */
+            height: auto;
         }
-        .navigation button:hover {
-            background-color: #f0f0f0;
-        }
-        .terms {
-            text-align: left; /* Left justify the text */
-            max-width: calc(25% * 1.1 * 1.1); /* Width 10% wider */
-            margin: 0 auto;
-            border: 1px solid black; /* Thin black border */
-            background-color: rgba(255, 255, 255, 0.8); /* Very opaque white background */
-            padding: 10px; /* Increased padding for readability */
-            margin-bottom: 40px; /* Added buffer zone between terms and footer */
-        }
-        .title {
-            text-align: center;
-            font-size: 2em;
-            font-weight: bold;
-            margin-top: 0; /* Removed top margin */
-        }
-        .subtitle {
-            text-align: center;
+
+        .deal {
             font-size: 1.5em;
             font-weight: bold;
-            margin-top: 10px; /* Adjusted margin-top */
+            margin-bottom: 10px;
+            text-align: center;
+            background-color: yellow;
+            color: black;
+            padding: 5px;
+            border-radius: 5px;
         }
+
+        .deal2 {
+            font-size: 1.0em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+            background-color: #00FFFF;
+            color: black;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .limited-offer {
+            font-size: 0.7em;
+            color: white;
+            text-align: center;
+        }
+
+        .headshot-container {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .headshot {
+            border: 2px solid #00FFFF; /* Changed border to the provided blue */
+            border-radius: 50%;
+            width: 168px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .nav-buttons button {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .description {
+            text-align: left;
+            margin-bottom: 20px;
+            padding: 0 20px; /* Add padding to the sides */
+            max-width: 800px; /* Limit the width of the description */
+        }
+
+        .description-center {
+            text-align: center;
+        }
+
+        .highlight {
+            background-color: #00FFFF; /* Highlighted text with the provided blue */
+            color: black;
+        }
+
+        .video-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .video-container video {
+            width: 315px; /* Reduced video width for vertical orientation */
+            height: 560px; /* Adjusted height for vertical orientation */
+        }
+
         .footer {
             border-top: 1px solid black; /* Thin black bar separating footer */
             text-align: center;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.8);
         }
+
         .footer img {
             width: 21.25%; /* Same size as title logo */
             height: auto;
         }
+
         .footer .icons img {
             width: 10%; /* Smaller icons */
             height: auto;
             margin: 0 10px;
         }
 
+        .footer .contact-info {
+            font-size: 0.8em;
+            margin-top: 10px;
+            text-align: center;
+        }
+
         /* Media queries for mobile devices */
         @media (max-width: 768px) {
             .header img {
-                width: 42.5%; /* Title logo 2x as big */
-            }
-            .navigation button {
-                width: 18%; /* Make navigation buttons smaller */
-                padding: 5px 0; /* Adjust padding */
-                margin: 2px; /* Adjust margin */
-            }
-            .terms {
-                max-width: 100%; /* Text box as wide as phone allows */
-                padding: 2px; /* Minimal padding */
+                width: 100%; /* Title logo full width */
             }
         }
     </style>
+    <script>
+        function isMobileDevice() {
+            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        }
+
+        function contactMe() {
+            if (isMobileDevice()) {
+                window.location.href = "tel:+15095281992";
+            } else {
+                window.location.href = "mailto:kimmer@agentcasper.com";
+            }
+        }
+
+        function playVideo() {
+            const video = document.querySelector('.video-container video');
+            video.play();
+            const videoContainer = document.querySelector('.video-container');
+            videoContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </head>
 <body>
-
     <div class="header">
-        <img src="AgentCasperLogo.png" alt="Agent Casper Logo">
+        <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/AgentCasperEmailHeader.png" alt="Agent Casper Logo">
     </div>
 
-    <div class="navigation">
-        <button id="navHome" onclick="location.href='index.html'">Home</button>
-        <button id="navCasper" onclick="location.href='casper.html'">Casper</button>
-        <button id="navAgents" onclick="location.href='agentsPage.html'">Agents</button>
-        <button id="navHouses" onclick="location.href='houses.html'">Houses</button>
-        <button id="navDeals" onclick="location.href='deals.html'">Deals</button>
+    <div class="deal">
+        1.5% on new Buy/Sell Agreements.
+    </div>
+    <div class="deal2">
+        Now That's A Dog-gone Good Deal!
+    </div>
+    <div class="limited-offer">Limited Offer</div>
+
+    <div class="headshot-container">
+        <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/KimmerHeadShot3.jpg" alt="Kimmer O'Reilly Headshot" class="headshot">
     </div>
 
-    <div class="terms">
-        <div class="title">Deals</div>
-        <div class="subtitle">Terms and Limitations</div>
-        <p>
-            To be determined!
-        </p>
+    <div class="nav-buttons">
+        <button onclick="contactMe()">Contact Me</button>
+        <button onclick="location.href='index.html'">Home Page</button>
+        <button onclick="location.href='deals.html'">Disclaimer</button>
     </div>
 
+    <div class="description">
+        <p class="description-center">Deal Disclaimer and Limitations</p>
+        <p>1.5% on buy/sell agreements is a discretionary offer of Kimmer J. O'Reilly and does not extend beyond Mr. O'Reilly's agency capacity; there is no related grand offer from Keller Williams independently owned and operated office. This deal is limited to the year 2024 and can be pulled at any time. Only those with signed listing/buyer agreements may receive the offer. Please reach out to us for professional real estate services:</p>
+        <p>Contact Information:<br>
+            Phone: 1 (509) 528-1992<br>
+            Email: <a href="mailto:kimmer@agentcasper.com" style="color: white;">kimmer@agentcasper.com</a></p>
+    </div>
     <div class="footer">
         <p>&copy; 2024 AgentCasper.com. All rights reserved.</p>
         <div class="icons">
-            <img src="NARicon.png" alt="NAR Icon">
-            <img src="EQicon.png" alt="EQ Icon">
+            <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/RElogos.png" alt="RE Logos">
         </div>
-        <img src="Remaxlogo.png" alt="Remax Logo">
+        <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/kwlogo.png" alt="KW Logo">
+        <div class="contact-info">
+            Real Estate Agent License: 24015725 | Each Keller Williams office is independently owned & operated.
+        </div>
     </div>
-
 </body>
 </html>
