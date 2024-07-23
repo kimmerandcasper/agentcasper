@@ -193,7 +193,8 @@
         function playVideo() {
             const video = document.querySelector('.video-container video');
             video.play();
-            video.scrollIntoView({ behavior: 'smooth' });
+            const videoContainer = document.querySelector('.video-container');
+            videoContainer.scrollIntoView({ behavior: 'smooth' });
         }
     </script>
 </head>
@@ -223,10 +224,9 @@
     <div class="description">
         <p class="description-center">Hi! My name is Kimmer O'Reilly.</p>
         <p>I was once a Securities Professional running the Private Equity firm Comet Capital Investments, L.P., and a Banker for the Federal Savings Bank before falling ill with Acute B-Cell Lymphoblastic Leukemia at the age of 28. Moving back home to the TriCities to recover from a stem cell transplant, I took my Real Estate Licensing classes and spend my days riding around town on my Harley with Casper, my service dog. Together, for a limited time, we're offering a <span class="highlight">crazy 1.5% commission deal</span> to sellers & buyers to supercharge my career, saving you money and helping me heal from the financial damage caused by cancer. That's a dog-gone good deal! Please reach out to us for professional Real Estate services:</p>
-        <p>Contact Information:<br>
-        Phone: 1 (509) 528-1992<br>
-        Email: <a href="mailto:kimmer@agentcasper.com" style="color: white;">kimmer@agentcasper.com</a></p>
-    </div>
+<p>Contact Information:<br>
+Phone: 1 (509) 528-1992<br>
+Email: <a href="mailto:kimmer@agentcasper.com" style="color: white;">kimmer@agentcasper.com</a></p>
 
     <div class="video-title">Meet Casper the service dog!</div>
 
