@@ -100,7 +100,7 @@
         }
 
         .headshot {
-            border: 2px solid #000000; /* Changed border to the provided blue */
+            border: 2px solid #00FFFF; /* Changed border to the provided blue */
             border-radius: 50%;
             width: 168px;
         }
@@ -185,9 +185,16 @@
         }
     </style>
     <script>
-        function scrollToContactInfo() {
-            const contactInfo = document.querySelector('.description');
-            contactInfo.scrollIntoView({ behavior: 'smooth' });
+        function isMobileDevice() {
+            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        }
+
+        function contactMe() {
+            if (isMobileDevice()) {
+                window.location.href = "tel:+15095281992";
+            } else {
+                window.location.href = "mailto:kimmer@agentcasper.com";
+            }
         }
 
         function playVideo() {
@@ -216,7 +223,7 @@
     </div>
 
     <div class="nav-buttons">
-        <button onclick="scrollToContactInfo()">Contact Me</button>
+        <button onclick="contactMe()">Contact Me</button>
         <button onclick="playVideo()">Meet Casper</button>
         <button onclick="location.href='deals.html'">Disclaimer</button>
     </div>
