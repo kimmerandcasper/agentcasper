@@ -247,6 +247,27 @@
             const videoContainer = document.querySelector('.video-container');
             videoContainer.scrollIntoView({ behavior: 'smooth' });
         }
+
+        function switchHeadshot() {
+            const headshot = document.querySelector('.headshot');
+            const img1 = 'https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/KimmerHeadShot3.jpg';
+            const img2 = 'https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CasperHeadShot3.png';
+
+            let currentImg = img1;
+            let nextImg = img2;
+
+            setInterval(() => {
+                headshot.style.transform = 'scale(0.9)';
+                setTimeout(() => {
+                    currentImg = currentImg === img1 ? img2 : img1;
+                    nextImg = nextImg === img2 ? img1 : img2;
+                    headshot.src = currentImg;
+                    headshot.style.transform = 'scale(1)';
+                }, 500);
+            }, 5000);
+        }
+
+        document.addEventListener('DOMContentLoaded', switchHeadshot);
     </script>
 </head>
 <body>
@@ -260,6 +281,8 @@
     <div class="deal2">
         Now That's A Dog-gone Good Deal!
     </div>
+    <div class="limited-offer">Limited Offer</div>
+
     <div class="headshot-container">
         <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/KimmerHeadShot3.jpg" alt="Kimmer O'Reilly Headshot" class="headshot">
     </div>
@@ -279,6 +302,9 @@
     </div>
 
     <div class="video-title">Meet Casper the service dog!</div>
+    <div class="description">
+        <p>Casper is an awesome Service Dog that assists me in my life and real estate efforts. He is a purebred Australian Shepherd trained with incapacitation training. Casper rides around on my motorcycle with me, looking for real estate deals.</p>
+    </div>
 
     <div class="video-container">
         <video controls>
