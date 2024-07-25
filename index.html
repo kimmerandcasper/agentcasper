@@ -70,7 +70,7 @@
             height: auto;
         }
 
-        .deal, .deal2 {
+        .deal {
             font-size: 1.5em;
             font-weight: bold;
             margin-bottom: 10px;
@@ -79,6 +79,18 @@
             border-radius: 5px;
             position: relative;
             animation: highlight 2s infinite;
+            background: linear-gradient(to right, #f6ff00, rgba(255, 255, 255, 0));
+        }
+
+        .deal2 {
+            font-size: 1.0em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            position: relative;
+            background: linear-gradient(to right, #00FFFF, rgba(255, 255, 255, 0));
         }
 
         @keyframes highlight {
@@ -91,21 +103,11 @@
         }
 
         .deal {
-            background-color: #f6ff00; /* Bootstrap yellow */
             color: #000000;
         }
 
         .deal2 {
-            background-color: #00FFFF; /* Accent cyan */
             color: black;
-            animation: none; /* No animation for the second deal */
-        }
-
-        .limited-offer {
-            font-size: 0.7em;
-            color: #6c757d; /* Bootstrap gray */
-            text-align: center;
-            margin-bottom: 20px;
         }
 
         .headshot-container {
@@ -264,7 +266,7 @@
 </head>
 <body>
     <div class="header">
-        <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/AgentCasperEmailHeader.png" alt="Agent Casper Logo">
+        <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/AgentCasperHeader.png" alt="Agent Casper Logo">
     </div>
 
     <div class="deal">
@@ -273,7 +275,6 @@
     <div class="deal2">
         Now That's A Dog-gone Good Deal!
     </div>
-    <div class="limited-offer">Limited Offer</div>
 
     <div class="headshot-container">
         <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/KimmerHeadShot3.jpg" alt="Kimmer O'Reilly Headshot" class="headshot">
@@ -308,7 +309,6 @@
     <div class="footer">
         <div class="background-logo"></div>
         <div style="display: flex; align-items: center; justify-content: center; position: relative; z-index: 1;">
-            <img src="https://github.com/kimmerandcasper/agentcasper/blob/main/CasperHeadshot1.jpg?raw=true" alt="Casper Headshot" style="width: 80px; height: auto; margin-right: 10px;">
             <div>
                 <p>&copy; 2024 AgentCasper.com. All rights reserved.</p>
                 <div class="icons">
@@ -318,7 +318,9 @@
                 <div class="contact-info">
                     Real Estate Agent License: 24015725 | Each Keller Williams office is independently owned & operated.
                 </div>
+                <p style="font-size: 0.8em; color: #6c757d;">Disclaimer: Agent Casper the dog is a service dog and the mascot of AgentCasper.com, not a licensed real estate agent. Any reference to Agent Casper's real estate expertise is for fun and marketing purposes only. Please don't ask Casper to negotiate your deals; he's only good at fetching them!</p>
             </div>
+            <img src="https://github.com/kimmerandcasper/agentcasper/blob/main/CasperHeadshot1.jpg?raw=true" alt="Casper Headshot" style="width: 80px; height: auto; margin-left: 10px;">
         </div>
     </div>
 </body>
