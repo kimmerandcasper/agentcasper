@@ -154,10 +154,8 @@
         }
 
         .highlight {
-            background-color: #00FFFF; /* Highlighted text with the accent cyan color */
-            color: black;
-            padding: 2px 4px;
-            border-radius: 3px;
+            background: linear-gradient(to right, #00FFFF, rgba(255, 255, 255, 0)); /* Highlighted text with the accent cyan color */
+            padding: 2px 8px;
         }
 
         .video-title {
@@ -254,16 +252,10 @@
             const img2 = 'https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CasperHeadShot3.png';
 
             let currentImg = img1;
-            let nextImg = img2;
 
             setInterval(() => {
-                headshot.style.transform = 'scale(0.9)';
-                setTimeout(() => {
-                    currentImg = currentImg === img1 ? img2 : img1;
-                    nextImg = nextImg === img2 ? img1 : img2;
-                    headshot.src = currentImg;
-                    headshot.style.transform = 'scale(1)';
-                }, 500);
+                currentImg = currentImg === img1 ? img2 : img1;
+                headshot.src = currentImg;
             }, 5000);
         }
 
