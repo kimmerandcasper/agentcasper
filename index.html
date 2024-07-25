@@ -122,6 +122,12 @@
             height: auto;
         }
 
+        .headshot-text {
+            font-size: 0.8em;
+            color: #6c757d; /* Gray text color */
+            margin-top: 5px;
+        }
+
         .nav-buttons {
             display: flex;
             justify-content: center;
@@ -250,13 +256,20 @@
 
         function switchHeadshot() {
             const headshot = document.querySelector('.headshot');
-            const img1 = 'https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/KimmerHeadShot3.jpg';
-            const img2 = 'https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CasperHeadShot3.png';
+            const headshotText = document.querySelector('.headshot-text');
+            const img1 = 'https://github.com/kimmerandcasper/agentcasper/blob/main/KimmerHeadShotSolo.png';
+            const img2 = 'https://github.com/kimmerandcasper/agentcasper/blob/main/CasperHeadShot3.png';
 
             let currentImg = img1;
 
             setInterval(() => {
-                currentImg = currentImg === img1 ? img2 : img1;
+                if (currentImg === img1) {
+                    currentImg = img2;
+                    headshotText.textContent = 'Agent Casper';
+                } else {
+                    currentImg = img1;
+                    headshotText.textContent = 'Kimmer O\'Reilly';
+                }
                 headshot.src = currentImg;
             }, 5000);
         }
@@ -277,7 +290,8 @@
     </div>
 
     <div class="headshot-container">
-        <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/KimmerHeadShot3.jpg" alt="Kimmer O'Reilly Headshot" class="headshot">
+        <img src="https://github.com/kimmerandcasper/agentcasper/blob/main/KimmerHeadShotSolo.png" alt="Kimmer O'Reilly Headshot" class="headshot">
+        <div class="headshot-text">Kimmer O'Reilly</div>
     </div>
 
     <div class="nav-buttons">
