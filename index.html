@@ -122,7 +122,7 @@
             height: auto;
         }
 
-        .headshot-text {
+        .headshot-text, .job-title-text {
             font-size: 0.8em;
             color: #6c757d; /* Gray text color */
             margin-top: 5px;
@@ -257,23 +257,29 @@
         function switchHeadshot() {
             const headshot = document.querySelector('.headshot');
             const img1 = 'https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/KimmerHeadShotSolo.png';
-            const img2 = 'https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CasperHeadShot3.png';
+            const img2 = 'https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CaseyCrockerHeadshot.png';
+            const img3 = 'https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CasperHeadShot3.png';
 
-            let currentImg = img1;
+            let images = [img1, img2, img3];
+            let index = 0;
 
             setInterval(() => {
-                currentImg = currentImg === img1 ? img2 : img1;
-                headshot.src = currentImg;
+                index = (index + 1) % images.length;
+                headshot.src = images[index];
             }, 5000);
         }
 
         function switchText() {
             const headshotText = document.querySelector('.headshot-text');
-            let currentText = 'Kimmer O\'Reilly';
+            const jobTitleText = document.querySelector('.job-title-text');
+            let texts = ['Kimmer O\'Reilly', 'Casey Crocker', 'Agent Casper'];
+            let jobTitles = ['Real Estate Agent | Securities Professional', 'Photographer', 'Mascot'];
+            let index = 0;
 
             setInterval(() => {
-                currentText = currentText === 'Kimmer O\'Reilly' ? 'Agent Casper' : 'Kimmer O\'Reilly';
-                headshotText.textContent = currentText;
+                index = (index + 1) % texts.length;
+                headshotText.textContent = texts[index];
+                jobTitleText.textContent = jobTitles[index];
             }, 5000);
         }
 
@@ -298,6 +304,7 @@
     <div class="headshot-container">
         <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/KimmerHeadShotSolo.png" alt="Kimmer O'Reilly Headshot" class="headshot">
         <div class="headshot-text">Kimmer O'Reilly</div>
+        <div class="job-title-text">Real Estate Agent | Securities Professional</div>
     </div>
 
     <div class="nav-buttons">
