@@ -80,6 +80,7 @@
             position: relative;
             animation: highlight 2s infinite;
             background: linear-gradient(to right, #f6ff00, rgba(255, 255, 255, 0));
+            white-space: nowrap; /* Ensure the text does not wrap */
         }
 
         .deal2 {
@@ -118,7 +119,7 @@
         .headshot {
             border: 2px solid #ffffff; /* Border color matching the accent cyan */
             border-radius: 50%;
-            width: 168px;
+            width: 210px; /* 25% larger */
             height: auto;
         }
 
@@ -232,6 +233,16 @@
                 width: 100%; /* Full width video on mobile */
                 height: auto; /* Auto height to maintain aspect ratio */
             }
+
+            .description img {
+                width: 100%; /* Full width image on mobile */
+                height: auto; /* Auto height to maintain aspect ratio */
+            }
+
+            .deal {
+                font-size: 1.2em; /* Adjust font size for mobile */
+                padding: 5px; /* Adjust padding for mobile */
+            }
         }
     </style>
     <script>
@@ -266,7 +277,7 @@
             setInterval(() => {
                 index = (index + 1) % images.length;
                 headshot.src = images[index];
-            }, 5000);
+            }, 3000);
         }
 
         function switchText() {
@@ -280,7 +291,7 @@
                 index = (index + 1) % texts.length;
                 headshotText.textContent = texts[index];
                 jobTitleText.textContent = jobTitles[index];
-            }, 5000);
+            }, 3000);
         }
 
         function scrollToCasey() {
@@ -341,8 +352,12 @@
     <div class="video-title" id="casey-crocker">Casey Crocker at CE Media</div>
     <div class="description">
         <img src="https://github.com/kimmerandcasper/agentcasper/blob/main/CaseyCrockerHeadshot.png?raw=true" alt="Casey Crocker Headshot" style="width: 300px; height: auto; display: block; margin: 0 auto;">
+        <p>Email: <a href="mailto:hello@cemediawa.com" style="color: #00FFFF;">hello@cemediawa.com</a><br>
+        Phone: <a href="tel:+15098349774" style="color: #00FFFF;">(509) 834-9774</a><br>
+        Based out of Pasco, Washington</p>
         <p>Casey Crocker is a top-tier real estate photographer known for his stunning visuals that bring properties to life. With an eye for detail and a passion for capturing the essence of each home, Casey's photography highlights the unique features and charm of every property. His expertise ensures that every shot is not only beautiful but also strategically composed to appeal to potential buyers. Trust Casey Crocker at CE Media to showcase your property in the best light, creating an unforgettable first impression and driving more interest and offers. Experience the difference with Casey's professional real estate photography services, and watch your listings shine like never before!</p>
-        <p class="description-center">Casey Work:</p>
+        <p class="description-center">Casey's Work:</p>
+        <img src="https://github.com/kimmerandcasper/agentcasper/blob/main/CaseyPhotoCollage.png?raw=true" alt="Casey Photo Collage" style="width: 600px; height: auto; display: block; margin: 0 auto;">
     </div>
 
     <div class="footer">
