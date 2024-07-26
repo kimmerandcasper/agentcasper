@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agent Casper</title>
+    <title>Agent Casper - Deals</title>
     <meta name="description" content="At AgentCasper.com, we offer exceptional real estate services with personalized expertise from Kimmer O'Reilly and Evan DeTienne.">
     <meta name="keywords" content="real estate, houses, homes, agents, Agent Casper, Kimmer O'Reilly, Evan DeTienne">
     <meta name="author" content="Agent Casper">
@@ -43,16 +43,16 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden; /* Allow vertical scrolling but hide horizontal overflow */
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8f9fa; /* Light gray background for a clean look */
+            color: #343a40; /* Dark gray text color */
         }
 
         body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: black; /* Set body background color to black */
             display: flex;
             flex-direction: column;
             justify-content: flex-start; /* Align items at the start of the column */
             align-items: center;
-            color: white; /* Changed text color to white for better contrast against black background */
             padding-top: 20px; /* Add padding to top */
         }
 
@@ -61,11 +61,12 @@
             margin-bottom: 20px;
             background-color: white; /* Set header background color to white */
             width: 100%; /* Full width for the header */
-            padding-top: 20px; /* Add padding to the top */
+            padding: 20px 0; /* Add padding to the top and bottom */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
         }
 
         .header img {
-            width: 50%; /* Reduced logo size by 50% */
+            width: 500px; /* Set logo width to be twice as big */
             height: auto;
         }
 
@@ -74,10 +75,10 @@
             font-weight: bold;
             margin-bottom: 10px;
             text-align: center;
-            background-color: yellow;
-            color: black;
-            padding: 5px;
+            padding: 10px;
             border-radius: 5px;
+            position: relative;
+            white-space: nowrap; /* Ensure the text does not wrap */
         }
 
         .deal2 {
@@ -85,49 +86,88 @@
             font-weight: bold;
             margin-bottom: 10px;
             text-align: center;
-            background-color: #00FFFF;
-            color: black;
-            padding: 5px;
+            padding: 10px;
             border-radius: 5px;
+            position: relative;
+            background: linear-gradient(to right, #00FFFF, rgba(255, 255, 255, 0));
         }
 
-        .limited-offer {
-            font-size: 0.7em;
-            color: white;
+        .terms {
+            font-size: 0.6em;
             text-align: center;
+            margin-bottom: 20px;
+        }
+
+        @keyframes highlight {
+            0%, 100% {
+                background-color: #ffe600; /* Initial color */
+            }
+            50% {
+                background-color: hsl(54, 100%, 72%); /* Highlight color */
+            }
+        }
+
+        .deal {
+            color: #000000;
+        }
+
+        .deal2 {
+            color: black;
         }
 
         .headshot-container {
             text-align: center;
-            margin: 10px 0;
+            margin: 20px 0;
         }
 
         .headshot {
-            border: 2px solid #000000; /* Changed border to the provided blue */
+            border: 2px solid #ffffff; /* Border color matching the accent cyan */
             border-radius: 50%;
-            width: 168px;
+            width: 210px; /* 25% larger */
+            height: auto;
+        }
+
+        .headshot-text, .job-title-text {
+            font-size: 0.8em;
+            color: #6c757d; /* Gray text color */
+            margin-top: 5px;
         }
 
         .nav-buttons {
             display: flex;
             justify-content: center;
             gap: 10px;
-            margin: 10px 0;
+            margin: 20px 0;
         }
 
         .nav-buttons button {
-            background-color: white;
-            color: black;
+            background-color: #343a40; /* Dark gray background */
+            color: white;
             border: none;
-            padding: 5px 10px;
+            padding: 10px 20px;
             cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-buttons button:hover {
+            background-color: #495057; /* Slightly lighter gray on hover */
         }
 
         .description {
             text-align: left;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             padding: 0 20px; /* Add padding to the sides */
             max-width: 800px; /* Limit the width of the description */
+            box-sizing: border-box;
+        }
+
+        .description img {
+            max-width: 100%; /* Ensure images fit within the container */
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
 
         .description-center {
@@ -135,55 +175,89 @@
         }
 
         .highlight {
-            background-color: #00FFFF; /* Highlighted text with the provided blue */
-            color: black;
+            background: linear-gradient(to right, #00FFFF, rgba(255, 255, 255, 0)); /* Highlighted text with the accent cyan color */
+            padding: 2px 8px;
         }
 
         .video-title {
             font-size: 1.5em;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             text-align: center;
         }
 
         .video-container {
             text-align: center;
-            margin: 20px 0;
+            margin: 40px 0;
         }
 
         .video-container video {
             width: 315px; /* Reduced video width for vertical orientation */
             height: 560px; /* Adjusted height for vertical orientation */
+            border: 2px solid #00FFFF; /* Border matching the accent cyan color */
+            border-radius: 10px;
         }
 
         .footer {
-            border-top: 1px solid black; /* Thin black bar separating footer */
+            border-top: 1px solid #dee2e6; /* Light gray border */
             text-align: center;
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: white; /* White background for footer */
+            position: relative;
         }
 
         .footer img {
-            width: 21.25%; /* Same size as title logo */
+            width: 80px; /* Set consistent logo width */
             height: auto;
+            margin: 0 10px;
         }
 
         .footer .icons img {
-            width: 10%; /* Smaller icons */
-            height: auto;
-            margin: 0 10px;
+            margin: 0 5px; /* Adjust icon margins */
         }
 
         .footer .contact-info {
             font-size: 0.8em;
             margin-top: 10px;
-            text-align: center;
+            color: #6c757d; /* Gray text for contact info */
+        }
+
+        .footer .terms {
+            font-size: 0.6em;
+        }
+
+        .footer .background-logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            background-image: url('https://github.com/kimmerandcasper/agentcasper/blob/main/AgentCasperEmailHeader.png?raw=true');
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
         }
 
         /* Media queries for mobile devices */
         @media (max-width: 768px) {
             .header img {
                 width: 100%; /* Title logo full width */
+            }
+
+            .video-container video {
+                width: 100%; /* Full width video on mobile */
+                height: auto; /* Auto height to maintain aspect ratio */
+            }
+
+            .description img {
+                width: 100%; /* Full width image on mobile */
+                height: auto; /* Auto height to maintain aspect ratio */
+            }
+
+            .deal {
+                font-size: 1.2em; /* Adjust font size for mobile */
+                padding: 5px; /* Adjust padding for mobile */
             }
         }
     </style>
@@ -210,25 +284,19 @@
 </head>
 <body>
     <div class="header">
-        <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/AgentCasperEmailHeader.png" alt="Agent Casper Logo">
+        <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/AgentCasperHeader.png" alt="Agent Casper Logo">
     </div>
 
     <div class="deal">
-        1.5% on new Buy/Sell Agreements.
+       Terms and Conditions
     </div>
-    <div class="deal2">
-        Now That's A Dog-gone Good Deal!
-    </div>
-    <div class="limited-offer">Limited Offer</div>
 
     <div class="headshot-container">
         <img src="https://github.com/kimmerandcasper/agentcasper/blob/main/CasperHeadshot2.jpg?raw=true" alt="Kimmer O'Reilly Headshot" class="headshot">
     </div>
 
     <div class="nav-buttons">
-        <button onclick="location.href='index.html'">Home Page</button>
-        <button onclick="contactMe()">Contact Me</button>
-        <button onclick="location.href='deals.html'">Disclaimer</button>
+        <button onclick="location.href='index.html'">Home</button>
     </div>
 
     <div class="description">
@@ -241,35 +309,35 @@
             <li><strong>Discretion:</strong> The offer may be withdrawn at any time at the sole discretion of Kimmer J. O'Reilly.</li>
             <li><strong>Eligibility:</strong> To qualify for this offer, a signed listing or buyer agreement with Kimmer J. O'Reilly is required.</li>
             <li><strong>One-Time Use:</strong> The offer is limited to a one-time use per new customer, meaning a customer is not entitled to it multiple times.</li>
-            <li><strong>Status Updates:</strong> The active and inactive status of this deal will be listed on our website at <a href="https://agentcasper.com" style="color: white;">AgentCasper.com</a>. Please check the website regularly for updates on the availability of the offer.</li>
+            <li><strong>Status Updates:</strong> The active and inactive status of this deal will be listed on our website at <a href="https://agentcasper.com" style="color: #00FFFF;">AgentCasper.com</a>. Please check the website regularly for updates on the availability of the offer.</li>
         </ul>
         
         <p><strong>Note:</strong> This offer is subject to all applicable laws and regulations governing real estate transactions. For further details and professional real estate services, please contact us directly:</p>
         
         <p>Contact Information:<br>
             Phone: 1 (509) 528-1992<br>
-            Email: <a href="mailto:kimmer@agentcasper.com" style="color: white;">kimmer@agentcasper.com</a></p>
+            Email: <a href="mailto:kimmer@agentcasper.com" style="color: #00FFFF;">kimmer@agentcasper.com</a></p>
     </div>
-    <div class="footer" style="background-color: white; color: black; text-align: center; position: relative;">
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.1; background-image: url('https://github.com/kimmerandcasper/agentcasper/blob/main/AgentCasperEmailHeader.png?raw=true'); background-size: cover; background-position: center;"></div>
-        <div style="position: relative; z-index: 1;">
-            <div style="display: flex; align-items: center;">
-                <img src="https://github.com/kimmerandcasper/agentcasper/blob/main/CasperHeadshot1.jpg?raw=true" alt="Casper Headshot" style="width: 10%; height: auto; margin-right: 10px;">
-                <div style="flex-grow: 1;">
-                    <p>&copy; 2024 AgentCasper.com. All rights reserved.</p>
-                    <div class="icons" style="display: flex; align-items: center; justify-content: center;">
-                        <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/RElogos.png" alt="RE Logos" style="margin-right: 10px;">
-                        <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/kwlogo.png" alt="KW Logo" style="margin-right: 10px;">
-                    </div>
-                    <div class="contact-info">
-                        Real Estate Agent License: 24015725 | Each Keller Williams office is independently owned & operated.
-                    </div>
+
+    <div class="footer">
+        <div class="background-logo"></div>
+        <div style="display: flex; align-items: center; justify-content: center; position: relative; z-index: 1;">
+            <div>
+                <p>&copy; 2024 AgentCasper.com. All rights reserved.</p>
+                <div class="icons">
+                    <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/RElogos.png" alt="RE Logos">
+                    <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/kwlogo.png" alt="KW Logo">
                 </div>
+                <div class="contact-info">
+                    Real Estate Agent License: 24015725 | Each Keller Williams office is independently owned & operated.
+                </div>
+                <img src="https://github.com/kimmerandcasper/agentcasper/blob/main/CasperHeadshot1.jpg?raw=true" alt="Casper Headshot" style="width: 80px; height: auto; margin-left: 10px;">
+                <p class="terms">
+                    <a href="deals.html" style="color: #00FFFF;">Terms and Conditions</a>
+                </p>
+                <p style="font-size: 0.8em; color: #6c757d;">Disclaimer: Agent Casper the dog is a service dog and the mascot of AgentCasper.com, not a licensed real estate agent. Any reference to Agent Casper's real estate expertise is for fun and marketing purposes only. Please don't ask Casper to negotiate your deals; he's only good at fetching them!</p>
             </div>
         </div>
     </div>
-    
-    
-    
 </body>
 </html>
