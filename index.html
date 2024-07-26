@@ -9,7 +9,7 @@
     <meta name="author" content="Agent Casper">
     <link rel="icon" type="image/png" sizes="32x32" href="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CasperHeadshot1.jpg">
     <link rel="icon" type="image/png" sizes="16x16" href="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CasperHeadshot1.jpg">
-    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CasperHeadshot1.jpg"> <!-- For Apple devices -->
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/agentcasper/main/CasperHeadshot1.jpg"> <!-- For Apple devices -->
     <meta property="og:title" content="Agent Casper - Exceptional Real Estate Services">
     <meta property="og:description" content="At AgentCasper.com, we offer exceptional real estate services with personalized expertise from Kimmer O'Reilly and Evan DeTienne.">
     <meta property="og:image" content="path/to/your/image.jpg">
@@ -256,25 +256,31 @@
 
         function switchHeadshot() {
             const headshot = document.querySelector('.headshot');
-            const headshotText = document.querySelector('.headshot-text');
-            const img1 = 'https://github.com/kimmerandcasper/agentcasper/blob/main/KimmerHeadShotSolo.png';
-            const img2 = 'https://github.com/kimmerandcasper/agentcasper/blob/main/CasperHeadShot3.png';
+            const img1 = 'https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/KimmerHeadShotSolo.png';
+            const img2 = 'https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/CasperHeadShot3.png';
 
             let currentImg = img1;
 
             setInterval(() => {
-                if (currentImg === img1) {
-                    currentImg = img2;
-                    headshotText.textContent = 'Agent Casper';
-                } else {
-                    currentImg = img1;
-                    headshotText.textContent = 'Kimmer O\'Reilly';
-                }
+                currentImg = currentImg === img1 ? img2 : img1;
                 headshot.src = currentImg;
             }, 5000);
         }
 
-        document.addEventListener('DOMContentLoaded', switchHeadshot);
+        function switchText() {
+            const headshotText = document.querySelector('.headshot-text');
+            let currentText = 'Kimmer O\'Reilly';
+
+            setInterval(() => {
+                currentText = currentText === 'Kimmer O\'Reilly' ? 'Agent Casper' : 'Kimmer O\'Reilly';
+                headshotText.textContent = currentText;
+            }, 5000);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            switchHeadshot();
+            switchText();
+        });
     </script>
 </head>
 <body>
@@ -290,7 +296,7 @@
     </div>
 
     <div class="headshot-container">
-        <img src="https://github.com/kimmerandcasper/agentcasper/blob/main/KimmerHeadShotSolo.png" alt="Kimmer O'Reilly Headshot" class="headshot">
+        <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/KimmerHeadShotSolo.png" alt="Kimmer O'Reilly Headshot" class="headshot">
         <div class="headshot-text">Kimmer O'Reilly</div>
     </div>
 
