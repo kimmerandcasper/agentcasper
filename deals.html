@@ -61,13 +61,37 @@
             margin-bottom: 20px;
             background-color: white; /* Set header background color to white */
             width: 100%; /* Full width for the header */
-            padding: 20px 0; /* Add padding to the top and bottom */
+            padding: 20px 0 60px 0; /* Add padding to the top and bottom */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            position: relative; /* Relative positioning for inner elements */
         }
 
         .header img {
             width: 500px; /* Set logo width to be twice as big */
             height: auto;
+        }
+
+        .separator {
+            width: 90%; /* Width of the separator line */
+            height: 1px; /* Height of the separator line */
+            background-color: black; /* Color of the separator line */
+            margin: 5px auto; /* Reduced margin for less white space */
+        }
+
+        .social-icons {
+            position: absolute; /* Absolute positioning within the header */
+            bottom: 10px; /* Position at the bottom of the header */
+            width: 100%; /* Full width for centering icons */
+            text-align: center;
+        }
+
+        .social-icons a {
+            display: inline-block; /* Inline-block to ensure no dashes between icons */
+            margin: 0 10px; /* Space between icons */
+        }
+
+        .social-icons img {
+            width: 30px; /* Size of the icons reduced by 25% */
         }
 
         .deal {
@@ -285,6 +309,18 @@
 <body>
     <div class="header">
         <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/AgentCasperHeader.png" alt="Agent Casper Logo">
+        <div class="separator"></div>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/00_agentcasper?igshid=OWZ3NTJuMDN3Z3hi&utm_source=qr">
+                <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/instaicon.png" alt="Instagram Icon">
+            </a>
+            <a href="https://www.tiktok.com/@00_agentcasper?_t=8nraMsQPnqh&_r=1">
+                <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/tiktokicon.png" alt="TikTok Icon">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61563427619932">
+                <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/fbicon.png" alt="Facebook Icon">
+            </a>
+        </div>
     </div>
 
     <div class="deal">
@@ -301,7 +337,7 @@
 
     <div class="description">
         <p class="description-center">1.5% Commission Offer</p>
-        <p>This 1.5% commission offer on buy/sell agreements is exclusively available through Kimmer J. O'Reilly and does not extend beyond Mr. O'Reilly's agency capacity. It is not a general offer from Keller Williams or its independently owned and operated offices.</p>
+        <p>This 1.5% commission offer on buy/sell agreements is exclusively available through Kimmer J. O'Reilly and does not extend beyond Mr. O'Reilly's agency capacity on properties with an intially contracted listing price of $250,000.00 or greater. It is not a general offer from Keller Williams independently owned and operated offices.</p>
         
         <p><strong>Terms of the Offer:</strong></p>
         <ul>
@@ -335,7 +371,7 @@
                 <p class="terms">
                     <a href="deals.html" style="color: #00FFFF;">Terms and Conditions</a>
                 </p>
-                <p style="font-size: 0.8em; color: #6c757d;">Disclaimer: Agent Casper the dog is a service dog and the mascot of AgentCasper.com, not a licensed real estate agent. Any reference to Agent Casper's real estate expertise is for fun and marketing purposes only. Please don't ask Casper to negotiate your deals; he's only good at fetching them!</p>
+                <p style="font-size: 0.8em; color: #6c757d;">Disclaimer: Agent Casper the dog is a service dog and the mascot of AgentCasper.com, not a licensed real estate agent. Any reference to Agent Casper's real estate expertise is for fun and marketing purposes only. Please don't ask Casper to negotiate your deals; he's only good at fetching them! The 1.5% deal only applies to real estate with a listing price of above $250,000.</p>
             </div>
         </div>
     </div>

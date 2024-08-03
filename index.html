@@ -61,13 +61,37 @@
             margin-bottom: 20px;
             background-color: white; /* Set header background color to white */
             width: 100%; /* Full width for the header */
-            padding: 20px 0; /* Add padding to the top and bottom */
+            padding: 20px 0 60px 0; /* Add padding to the top and bottom */
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            position: relative; /* Relative positioning for inner elements */
         }
 
         .header img {
             width: 500px; /* Set logo width to be twice as big */
             height: auto;
+        }
+
+        .separator {
+            width: 90%; /* Width of the separator line */
+            height: 1px; /* Height of the separator line */
+            background-color: black; /* Color of the separator line */
+            margin: 5px auto; /* Reduced margin for less white space */
+        }
+
+        .social-icons {
+            position: absolute; /* Absolute positioning within the header */
+            bottom: 10px; /* Position at the bottom of the header */
+            width: 100%; /* Full width for centering icons */
+            text-align: center;
+        }
+
+        .social-icons a {
+            display: inline-block; /* Inline-block to ensure no dashes between icons */
+            margin: 0 10px; /* Space between icons */
+        }
+
+        .social-icons img {
+            width: 30px; /* Size of the icons reduced by 25% */
         }
 
         .deal {
@@ -322,6 +346,18 @@
 <body>
     <div class="header">
         <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/AgentCasperHeader.png" alt="Agent Casper Logo">
+        <div class="separator"></div>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/00_agentcasper?igshid=OWZ3NTJuMDN3Z3hi&utm_source=qr">
+                <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/instaicon.png" alt="Instagram Icon">
+            </a>
+            <a href="https://www.tiktok.com/@00_agentcasper?_t=8nraMsQPnqh&_r=1">
+                <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/tiktokicon.png" alt="TikTok Icon">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61563427619932">
+                <img src="https://raw.githubusercontent.com/kimmerandcasper/agentcasper/main/fbicon.png" alt="Facebook Icon">
+            </a>
+        </div>
     </div>
 
     <div class="deal">
